@@ -24,7 +24,7 @@ const Header = () => {
             </div>
         </nav>
 
-        <div className="text-center bg-[#131313] object-cover py-16 rounded-2xl" style={{ backgroundImage: `url(${bannerBg})`}}>
+        <div className="text-center bg-[#131313] object-cover py-16 rounded-2xl mb-12" style={{ backgroundImage: `url(${bannerBg})`}}>
             <img className="mx-auto" src={bannerLogo} alt="" />
             <h2 className="text-4xl font-bold text-white mt-6">Assemble Your Ultimate Dream 11 Cricket Team</h2>
             <p className="text-2xl font-medium text-gray-400 my-4">Beyond Boundaries Beyond Limits</p>
