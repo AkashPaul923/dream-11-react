@@ -5,7 +5,7 @@ import { useState } from 'react';
 import Selected from '../Selected/Selected';
 
 
-const Main = ({players, handlePlayerSelect, selectedPlayers}) => {
+const Main = ({players, handlePlayerSelect, selectedPlayers, handleDeleteBtn}) => {
     const [available, setAvailable] = useState(true)
     
     const handleSelectedBtn = () =>{
@@ -26,7 +26,7 @@ const Main = ({players, handlePlayerSelect, selectedPlayers}) => {
                 </div>
             </div>
             {
-                available ? <Available players={players} handlePlayerSelect={handlePlayerSelect}></Available> : <Selected selectedPlayers={selectedPlayers} handleAvailabledBtn={handleAvailabledBtn}></Selected>
+                available ? <Available players={players} handlePlayerSelect={handlePlayerSelect}></Available> : <Selected selectedPlayers={selectedPlayers} handleAvailabledBtn={handleAvailabledBtn} handleDeleteBtn={handleDeleteBtn}></Selected>
             }
         </main>
     );
@@ -35,7 +35,8 @@ const Main = ({players, handlePlayerSelect, selectedPlayers}) => {
 Main.propTypes = {
     players: PropTypes.array,
     handlePlayerSelect: PropTypes.func,
-    selectedPlayers: PropTypes.array
+    selectedPlayers: PropTypes.array,
+    handleDeleteBtn: PropTypes.func
 };
 
 export default Main;

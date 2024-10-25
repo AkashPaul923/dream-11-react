@@ -1,7 +1,7 @@
 import { RiDeleteBin6Line } from "react-icons/ri";
-import PropTypes, { object } from 'prop-types';
+import PropTypes from 'prop-types';
 
-const SelectPlayer = ({selectedPlayer}) => {
+const SelectPlayer = ({selectedPlayer, handleDeleteBtn}) => {
     const {name, battingStyle, image} = selectedPlayer
     return (
         <div className="flex justify-between items-center p-6 border-2 rounded-2xl mb-6">
@@ -15,14 +15,15 @@ const SelectPlayer = ({selectedPlayer}) => {
                 </div>
             </div>
             <div>
-                <button className="text-red-600 text-3xl"><RiDeleteBin6Line /></button>
+                <button onClick={() =>handleDeleteBtn(selectedPlayer)} className="text-red-600 text-3xl"><RiDeleteBin6Line /></button>
             </div>
         </div>
     );
 };
 
 SelectPlayer.propTypes = {
-    selectedPlayer: PropTypes,object
+    selectedPlayer: PropTypes.object,
+    handleDeleteBtn: PropTypes.func
 };
 
 export default SelectPlayer;

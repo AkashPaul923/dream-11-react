@@ -2,12 +2,12 @@
 import PropTypes from 'prop-types';
 import SelectPlayer from '../SelectPlayer/SelectPlayer';
 
-const Selected = ({selectedPlayers, handleAvailabledBtn}) => {
+const Selected = ({selectedPlayers, handleAvailabledBtn ,handleDeleteBtn}) => {
     return (
         <div>
             <div>
                 {
-                    selectedPlayers.map((selectedPlayer, idx)=> <SelectPlayer key={idx} selectedPlayer={selectedPlayer}></SelectPlayer>)
+                    selectedPlayers.map((selectedPlayer, idx)=> <SelectPlayer key={idx} selectedPlayer={selectedPlayer} handleDeleteBtn={handleDeleteBtn}></SelectPlayer>)
                 }
             </div>
             <div>
@@ -19,7 +19,8 @@ const Selected = ({selectedPlayers, handleAvailabledBtn}) => {
 
 Selected.propTypes = {
     selectedPlayers: PropTypes.array,
-    handleAvailabledBtn: PropTypes.func
+    handleAvailabledBtn: PropTypes.func,
+    handleDeleteBtn: PropTypes.func
 };
 
 export default Selected;
