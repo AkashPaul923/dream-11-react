@@ -17,7 +17,7 @@ const Main = ({players, handlePlayerSelect, selectedPlayers, handleDeleteBtn}) =
     }
 
     return (
-        <main className="max-w-7xl mx-auto">
+        <main className="max-w-7xl mx-auto pb-[250px]">
             <div className='flex justify-between items-center mb-8'>
                 <h3 className='text-3xl font-bold'>{available? `Available Players`: `Selected Players(${selectedPlayers.length}/6)`} </h3>
                 <div>

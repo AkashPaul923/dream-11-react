@@ -4,6 +4,7 @@ import './App.css'
 import Header from './Components/Header/Header'
 import Main from './Components/Main/Main'
 import { useEffect } from 'react'
+import Footer from './Components/Footer/Footer'
 
 // import { ToastContainer, toast } from 'react-toastify';
 // import 'react-toastify/dist/ReactToastify.css';
@@ -51,6 +52,7 @@ function App() {
     <>
       <Header coin={coin} handleAddCoin={handleAddCoin}></Header>
       <Main players={players} handleDeleteBtn={handleDeleteBtn} handlePlayerSelect={handlePlayerSelect} selectedPlayers={selectedPlayers}></Main>
+      <Footer></Footer>
     </>
   )
 }
