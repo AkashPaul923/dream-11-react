@@ -7,6 +7,8 @@ import { useEffect } from 'react'
 
 function App() {
   const [players , setPlayers] = useState([])
+  const [selectedPlayers , setSelectedPlayer] = useState([])
+
 
   useEffect(() =>{
     fetch('players.json')
@@ -14,10 +16,15 @@ function App() {
     .then(data => setPlayers(data))
   }, [])
 
+  const handlePlayerSelect = (player) =>{
+    const newselectedPlayers = [...selectedPlayers , player]
+    setSelectedPlayer(newselectedPlayers)
+  }
+
   return (
     <>
       <Header></Header>
-      <Main players={players}></Main>
+      <Main players={players} handlePlayerSelect={handlePlayerSelect} selectedPlayers={selectedPlayers}></Main>
     </>
   )
 }

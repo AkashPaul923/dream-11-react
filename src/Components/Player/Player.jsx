@@ -1,7 +1,7 @@
 import { FaUser, FaFlag } from "react-icons/fa";
 import PropTypes from 'prop-types';
 
-const Player = ({player}) => {
+const Player = ({player, handlePlayerSelect}) => {
     const { name, country, role, battingStyle, bowlingStyle, price, image} = player;
 
     return (
@@ -23,14 +23,15 @@ const Player = ({player}) => {
             </div>
             <div className="flex justify-between items-center mt-3">
                 <p className="text-base font-semibold">Price: $ {price}</p>
-                <button className="text-sm font-normal px-4 py-2 rounded-lg border-2 hover:bg-[#f3f3f3]">Choose Player</button>
+                <button onClick={() => handlePlayerSelect(player)} className="text-sm font-normal px-4 py-2 rounded-lg border-2 hover:bg-[#f3f3f3]">Choose Player</button>
             </div>
         </div>
     );
 };
 
 Player.propTypes = {
-    player: PropTypes.object
+    player: PropTypes.object,
+    handlePlayerSelect: PropTypes.func
 };
 
 export default Player;
