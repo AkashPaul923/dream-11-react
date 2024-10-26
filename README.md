@@ -1,8 +1,18 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Dream 11
 
-Currently, two official plugins are available:
+This is a React-based application that allows users to select and manage cricket players for their team using a virtual coin system. Users can add players to their team from the available list using choose button and remove them using the delete button in the selected players section. The maximum number of players a user can select is six.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The site closely mimics the Dream 11 fantasy sports format, making it engaging and appealing for cricket enthusiasts.
+
+## Technologies
+HTML, Tailwind CSS, JavaSctipt, React.js, API
+
+
+
+## Features
+
+- Available/Selected toggle
+- Fancy Alert by React-Toastify
+- HTML generated in .jsx file
+
